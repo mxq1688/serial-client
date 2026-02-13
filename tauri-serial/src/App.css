@@ -1,0 +1,97 @@
+/* Logcat Style Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #2d2d30;
+  border-bottom: 1px solid #3e3e42;
+  align-items: center;
+}
+
+.select, .input, button {
+  padding: 6px 12px;
+  background: #3c3c3c;
+  color: #cccccc;
+  border: 1px solid #3e3e42;
+  border-radius: 4px;
+}
+
+.select:hover, .input:hover, button:hover {
+  background: #404040;
+  border-color: #007acc;
+}
+
+button {
+  cursor: pointer;
+}
+
+.log-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #1e1e1e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.log-line {
+  display: flex;
+  padding: 2px 0;
+  font-family: monospace;
+}
+
+.log-timestamp {
+  color: #808080;
+  margin-right: 8px;
+}
+
+.log-level {
+  font-weight: bold;
+  margin-right: 8px;
+  width: 20px;
+  text-align: center;
+}
+
+.log-tag {
+  color: #569cd6;
+  margin-right: 8px;
+}
+
+.log-pid {
+  color: #808080;
+  margin-right: 8px;
+}
+
+.log-message {
+  flex: 1;
+}
+
+.command-bar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #2d2d30;
+  border-top: 1px solid #3e3e42;
+}
+
+.command-input {
+  flex: 1;
+}
