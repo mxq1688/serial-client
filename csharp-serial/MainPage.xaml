@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogcatSerialDebugger.MainPage"
+             Title="Logcat Serial Debugger"
+             BackgroundColor="#1E1E1E">
+
+    <Grid Padding="10" RowDefinitions="Auto,*,Auto">
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Picker x:Name="PortPicker" BackgroundColor="#2D2D30"/>
+            <Picker x:Name="BaudPicker" BackgroundColor="#2D2D30"/>
+            <Button x:Name="ConnectBtn" Text="Connect" Clicked="OnConnectClicked"/>
+            <Picker x:Name="LevelPicker" BackgroundColor="#2D2D30"/>
+            <Button Text="Clear" Clicked="OnClearClicked"/>
+        </HorizontalStackLayout>
+        
+        <Editor Grid.Row="1" x:Name="LogDisplay" IsReadOnly="True" BackgroundColor="#1E1E1E"/>
+        
+        <HorizontalStackLayout Grid.Row="2" Spacing="10">
+            <Entry x:Name="CommandInput" Placeholder="Send command..."/>
+            <Button Text="Send" Clicked="OnSendClicked"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
