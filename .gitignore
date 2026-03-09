@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+dist-electron/
+target/
+build/
+*.exe
+*.bin
+
+# Go binaries (keep specific named ones)
+serial-debugger-*
+!go-serial/serial-debugger-*
+
+# Downloaded archives
+*.tar.gz
+*.tar.gz.*
+*.zip
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Service files
+.service/
