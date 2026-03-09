@@ -1,45 +1,50 @@
-/* Logcat Style Theme */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'JetBrains Mono', 'Consolas', monospace;
-  background: #1e1e1e;
-  color: #d4d4d4;
-}
-
 .app {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  background: #1e1e1e;
+  color: #e0e0e0;
+  font-family: 'Consolas', 'Monaco', monospace;
 }
 
 .toolbar {
   display: flex;
   gap: 10px;
   padding: 10px;
-  background: #2d2d30;
-  border-bottom: 1px solid #3e3e42;
-  align-items: center;
+  background: #2d2d2d;
+  border-bottom: 1px solid #444;
 }
 
-.select, .input, button {
-  padding: 6px 12px;
+.toolbar input {
+  flex: 1;
+  max-width: 300px;
+  padding: 6px 10px;
   background: #3c3c3c;
-  color: #cccccc;
-  border: 1px solid #3e3e42;
+  border: 1px solid #555;
+  color: #e0e0e0;
   border-radius: 4px;
 }
 
-.select:hover, .input:hover, button:hover {
-  background: #404040;
-  border-color: #007acc;
+.toolbar button {
+  padding: 6px 15px;
+  background: #0e639c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-button {
+.toolbar button:hover {
+  background: #1177bb;
+}
+
+.toolbar select {
+  padding: 6px 10px;
+  background: #3c3c3c;
+  border: 1px solid #555;
+  color: #e0e0e0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -52,46 +57,26 @@ button {
   line-height: 1.5;
 }
 
-.log-line {
-  display: flex;
-  padding: 2px 0;
-  font-family: monospace;
+.log-entry {
+  font-family: 'Consolas', 'Monaco', monospace;
+  white-space: pre-wrap;
+  margin-bottom: 2px;
 }
 
-.log-timestamp {
-  color: #808080;
-  margin-right: 8px;
+/* Scrollbar styling */
+.log-container::-webkit-scrollbar {
+  width: 8px;
 }
 
-.log-level {
-  font-weight: bold;
-  margin-right: 8px;
-  width: 20px;
-  text-align: center;
+.log-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
 }
 
-.log-tag {
-  color: #569cd6;
-  margin-right: 8px;
+.log-container::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
 }
 
-.log-pid {
-  color: #808080;
-  margin-right: 8px;
-}
-
-.log-message {
-  flex: 1;
-}
-
-.command-bar {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  background: #2d2d30;
-  border-top: 1px solid #3e3e42;
-}
-
-.command-input {
-  flex: 1;
+.log-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
