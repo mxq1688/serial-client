@@ -49,4 +49,21 @@
 ├── go-serial/              # 命令行版本
 │   ├── simple-serial.go    # 基础版源码
 │   ├── main.go             # 专业版源码
-│   └── [8个可执行文件
+│   └── [8个可执行文件]
+├── python-serial/          # PyQt6 桌面版（Logcat 风格 GUI）
+│   ├── run.py
+│   ├── build.bat           # 一键打包 exe
+│   └── dist/LogcatSerialDebugger.exe
+```
+
+### Python 桌面版（python-serial）
+
+- **技术栈**：Python 3 + PyQt6 + pyserial
+- **运行**：`py -3 run.py`
+- **打包 exe**：见 [python-serial/README.md](python-serial/README.md)（PyInstaller 命令与说明）
+
+```powershell
+cd python-serial
+.\build.bat
+# 输出: dist\LogcatSerialDebugger.exe
+```
