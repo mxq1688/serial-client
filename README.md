@@ -1,5 +1,7 @@
 # 🚀 Serial Debugger Suite - 专业串口调试工具套件
 
+> **各语言如何打包成 Windows exe？** 见 [docs/各语言打包exe方式总结.md](docs/各语言打包exe方式总结.md)（Go / Python / Rust / C# / C++ / Tauri / Flutter / PHP / Kotlin 等对比与命令）。
+
 ## 📦 项目概览
 
 这是一个功能强大的跨平台串口调试工具套件，包含三个版本：
